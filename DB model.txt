@@ -1,0 +1,57 @@
+CREATE DATABASE Zen
+USE Zen;
+
+CREATE TABLE USERS (
+    username VARCHAR(20) PRIMARY KEY,
+    email VARCHAR(20) NOT NULL,
+    password VARCHAR(20) NOT NULL,
+    batch INTEGER
+  );
+  INSERT INTO USERS VALUES ('John','john@gmail.com','john@123',49),
+  ('Dave', 'dave@gmail.com','dave@123',50),
+  ('Peter', 'peter@gmail.com', 'peter@123',51),
+  ('Eva', 'eva@gmail.com', 'eva@123',52), 
+  ('Sona', 'sona@gmail.com', 'sona@123',53);
+
+  CREATE TABLE CODEKATA (
+    username VARCHAR(20),
+    Totalproblems INT,
+    Solvedproblems INT,
+    Topic VARCHAR(20) PRIMARY KEY
+  );
+  INSERT INTO CODEKATA VALUES ('John',10,10,'Input/Output'),('Dave', 30,25,'Absolute Beginner'),('Peter',192,100,'Mathematics'),('Eva',308,200, 'Array'), ('Sona',196,75, 'Strings');
+  
+  
+  CREATE TABLE ATTENDANCE (
+    username VARCHAR(20),
+    SessionName VARCHAR(20) PRIMARY KEY,
+    Date DATE
+  );
+  INSERT INTO ATTENDANCE VALUES ('John','Array','2020-11-20'),('Dave','Callback','2020-11-24'),('Peter','Promise','2020-11-2'),('Eva','React','2020-12-01'), ('Sona','Mongodb','2020-12-07');
+  
+  CREATE TABLE TOPICS (
+    Topicname VARCHAR(20) PRIMARY KEY,
+    Date DATE
+  );
+  INSERT INTO TOPICS VALUES ('Array','2020-11-20'),('Callback','2020-11-24'),('Promise','2020-11-2'),('React','2020-12-01'), ('Mongodb','2020-12-07');
+
+  CREATE TABLE TASKS (
+    Taskname VARCHAR(20) PRIMARY KEY,
+    SubmittedDate DATE
+  );
+  INSERT INTo TASKS VALUES ('Array','2020-11-22'),('Callback','2020-11-26'),('Promise','2020-11-29'),('React','2020-12-03'), ('Mongodb','2020-12-09');
+
+  CREATE TABLE Company_Drives(
+    Companyname VARCHAR(20) PRIMARY KEY,
+    Date Date,
+    Usename VARCHAR(20)
+    
+   );
+   INSERT INTO Company_Drives VALUES ('TCS','2021-01-10','Dave'),('Cognizant','2021-02-13','Peter'),('WellsFargo','2021-03-20','Eva'),('BNY Mellon','2021-04-04','John'), ('Mongodb','2021-05-09','Sona');
+
+   CREATE TABLE Mentor(
+    Mentorname VARCHAR(20) PRIMARY KEY,
+    Batchno INT
+     
+    );
+    INSERT INTO Mentor VALUES ('Sangeetha','49'),('Harsha','50'),('Deepak' ,52), ('Ram',53);
